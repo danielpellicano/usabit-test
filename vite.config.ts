@@ -9,4 +9,9 @@ export default defineConfig({
     environment: 'jsdom',
     setupFiles: './src/setupTests.js',
   },
+  resolve: {
+    alias: [
+      { find: "msw/node", replacement: "/node_modules/msw/lib/native/index.mjs"}
+    ],
+  }
 });
