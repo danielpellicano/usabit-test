@@ -1,9 +1,9 @@
-// jest.config.js
-module.exports = {
-    testEnvironment: 'jsdom',
-    setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
-    moduleNameMapper: {
-      '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    },
-  };
-  
+import type { Config } from '@jest/types';
+
+const config: Config.InitialOptions = {
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+};
+
+export default config;
